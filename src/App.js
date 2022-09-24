@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component{
+  render() {
+    return(
+      <div className='container'>
+        <div className='notification-bar'>
+          <h3>Notifications</h3>
+          <div className='noti-box'>3</div>
+          <div className='mark-box'>Mark all as read</div>
+        </div>
+        <NotificationElement name={'Gianni Pintus'} image={'images/me.jpg'} text={'Created this project'} date={'2m ago'}/>
+        <NotificationElement name={'Mark Webber'} image={'images/mark.webp'} text={'reacted to your recent post My first tournament today!'} date={'1m ago'}/>
+      </div>
+    );
+  };
+};
+
+const NotificationElement = (props) => {
+  return(
+    <div className='infobox'>
+      <div className='picbox'><img src={props.image} alt="proPic"/></div>
+      <div className='textbox'>
+        <p><span className='Name'>{props.name} </span>{props.text}</p>
+        <p>{props.date}</p>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
