@@ -16,7 +16,7 @@ body{
     position: absolute;
     flex-direction: column;
     min-width: 90%;
-    min-height: 90vh;
+    max-height: 200vh;
     left: 1rem;
     right: 1rem;
     top: 1rem;
@@ -53,10 +53,10 @@ body{
 .infobox{
     display: flex;
     background-color: hsl(210, 60%, 98%);
-    min-height: 4.5em;
+    height: 100%;
     border-radius: 10px;
-    align-items: center;
     margin-bottom: 1em;
+    top: 3.5em;
 }
 
 .picbox{
@@ -65,7 +65,8 @@ body{
     width: 45px;
     height: 45px;
     border-radius: 25px;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5em;
     overflow: hidden;
     border: 0.1px solid rgb(195, 195, 195);
 }
@@ -84,6 +85,6 @@ p{
     font-size: 1rem;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: 5em;
+    margin-left: 4em;
     color: rgb(100, 100, 100);
 }
